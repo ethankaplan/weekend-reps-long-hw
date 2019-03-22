@@ -71,20 +71,33 @@
 }
 
 {
-    for (let i = 1; i <= 100; i++) {
-        if (i % 2 == 0) {
-          console.log(i+"<--- is an even number");
-        }
-      }    
+  for (let i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+      console.log(i + "<--- is an even number");
+    }
+  }
 }
 
 {
-    for (let i = 1; i <= 100; i++) {
-        if (i % 5 == 0) {
-          console.log(`I found a ${i}. High five!`);
-        }
-        if (i%3==0){
-            console.log(`I found a ${i}. Three is a crowd`);
-        }
-      }    
+  for (let i = 1; i <= 100; i++) {
+    if (i % 5 == 0) {
+      console.log(`I found a ${i}. High five!`);
+    }
+    if (i % 3 == 0) {
+      console.log(`I found a ${i}. Three is a crowd`);
+    }
+  }
+}
+
+{
+    let bank_account = 0;
+    for(let i = 1;i<=10;i++){
+        bank_account+=i;
+    }
+    console.log(`Bank_account has \$${bank_account}`);
+    bank_account=0;
+    for(let i = 1;i<=100;i++){
+        bank_account+=i*2;
+    }
+    console.log(`Bank_account has \$${bank_account}`);
 }
