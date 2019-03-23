@@ -90,14 +90,65 @@
 }
 
 {
-    let bank_account = 0;
-    for(let i = 1;i<=10;i++){
-        bank_account+=i;
+  let bank_account = 0;
+  for (let i = 1; i <= 10; i++) {
+    bank_account += i;
+  }
+  console.log(`Bank_account has \$${bank_account}`);
+  bank_account = 0;
+  for (let i = 1; i <= 100; i++) {
+    bank_account += i * 2;
+  }
+  console.log(`Bank_account has \$${bank_account}`);
+}
+
+{
+  let sum = 0;
+  for (let i = 1; i < 1000; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      sum += i;
     }
-    console.log(`Bank_account has \$${bank_account}`);
-    bank_account=0;
-    for(let i = 1;i<=100;i++){
-        bank_account+=i*2;
+  }
+  console.log(sum);
+}
+
+{
+  //1. elements
+  //2. they keep the order they're placed in until manipulated
+  //3. fingers on a hand
+}
+
+{
+  let quotes = ["a", "b", "c"];
+}
+
+{
+  //const randomThings = [1, 10, "Hello", true];
+  //1. randomThings[0]
+  //2. randomThings[2]="World"
+  //3. console.log(randomThings[2])
+}
+
+{
+  //1. ourClass[2]
+  //2. ourClass[4]="Octocat"
+  //3. ourClass.push("Cloud City")
+}
+
+{
+    //1. .push("Egon");
+    //2. .shift()
+    //3. .unshift("Bob Marley")
+    //4. .pop
+    //5. Yes. Change contents. No.
+}
+
+{
+    const i = 2;
+    if(i<100){
+        console.log("little number");
     }
-    console.log(`Bank_account has \$${bank_account}`);
+    else{
+        console.log("big number");
+    }
 }
