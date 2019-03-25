@@ -136,19 +136,157 @@
 }
 
 {
-    //1. .push("Egon");
-    //2. .shift()
-    //3. .unshift("Bob Marley")
-    //4. .pop
-    //5. Yes. Change contents. No.
+  //1. .push("Egon");
+  //2. .shift()
+  //3. .unshift("Bob Marley")
+  //4. .pop
+  //5. Yes. Change contents. No.
 }
 
 {
-    const i = 2;
-    if(i<100){
-        console.log("little number");
-    }
-    else{
-        console.log("big number");
+  const i = 2;
+  if (i < 100) {
+    console.log("little number");
+  } else {
+    console.log("big number");
+  }
+}
+
+{
+  const i = 7;
+  if (i < 5) {
+    console.log("little number");
+  } else if (i > 10) {
+    console.log("big number");
+  } else {
+    console.log("monkey");
+  }
+}
+
+{
+  //done in a lab, we had to move her shoe in the first step
+}
+
+{
+    //done in lab
+}
+
+{
+    const printcool = (name) =>{
+        console.log(`${name} is cool`);
     }
 }
+
+{
+    const calculateCube = (num)=>{
+        return num**3;
+    }
+    console.log(calculateCube(5));
+}
+
+{
+    const isVowel = (char)=>{
+        if (char=='a'||char==e||char=='i'||char=='o'||char=='u'){
+            return true;
+        }
+        return false;
+    }
+    console.log(isVowel("a"));
+}
+
+{
+    const getTwoLengths=(str1, str2)=>{
+        return [str1.length,str2.length];
+    }
+    console.log(getTwoLengths("Hank", "Hippopopalous"));
+}
+
+{
+    const getMultipleLengths = (array)=>{
+        let lens = [];
+        for(let i = 0;i<array.length;i++){
+            lens.push(array[i].length);
+        }
+        return lens;
+    }
+    console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+}
+
+{
+    const maxOfThree = (num1, num2, num3)=>{
+        if(num1>=num2&&num1>=num3){
+            return num1;
+        }
+        else if(num2>=num1&&num2>=num3){
+            return  num2;
+        }
+        else{
+            return num3;
+        }
+    }
+    console.log(maxOfThree(6, 9, 1));
+}
+
+{
+    const printLongestWord = (array)=>{
+        let str = array[0];
+        for(let i = 1;i<array.length;i++){
+            if(str.length<array[i].length){
+                str=array[i];
+            }
+        }
+        return str;
+    }
+    console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+}
+
+{
+    const transmogrify = (num1, num2, num3)=>{
+        return (num1*num2)**num3;
+    }
+    console.log(transmogrify(5, 3, 2));
+}
+
+{
+  const reverseWordOrder = (str) =>{
+        let str2="";
+        let toReturn ="";
+        for(let i = 0;i<str.length;i++){
+            if(str[i]!=" "){
+                str2+=str[i];
+              
+            }
+            else{
+             
+                toReturn=str2+" "+toReturn;
+                str2="";
+            }
+        }
+        return str2+" "+toReturn;
+    }
+    console.log(reverseWordOrder("Ishmael me Call"));
+    console.log(reverseWordOrder("I use Lâncome on my comb"));
+}
+
+{
+    const randomInt=(numFrom, numTo)=>{
+        return(Math.floor(Math.random() * (numTo-numFrom)+numFrom));
+    }
+    const randomNum=(numFrom, numTo)=>{
+        return(Math.random() * (numTo-numFrom)+numFrom);
+    }
+    const getRandomElement=(array)=>{
+        return array[randomInt(0,array.length)];
+    }
+    let quotes = ["a", "b", "c","d","e","f"];
+
+    console.log(randomInt(1,10));
+    console.log(randomInt(10,100));
+    console.log(randomNum(532,13267));
+    console.log(randomNum(1,10));
+    console.log(getRandomElement(quotes));
+//Technically the maximum is weighted significantly less than all others in the randomInt function.
+//Unsure how to address it, as either the min or max would be weighted (since it's 1.00-1.99=1 when floored, but maximum is the max, not max+.01 or anything
+//I say that, then after testing it I do get a maximum value. hmm
+}
+
