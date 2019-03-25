@@ -168,125 +168,174 @@
 }
 
 {
-    //done in lab
+  //done in lab
 }
 
 {
-    const printcool = (name) =>{
-        console.log(`${name} is cool`);
-    }
+  const printcool = name => {
+    console.log(`${name} is cool`);
+  };
 }
 
 {
-    const calculateCube = (num)=>{
-        return num**3;
-    }
-    console.log(calculateCube(5));
+  const calculateCube = num => {
+    return num ** 3;
+  };
+  console.log(calculateCube(5));
 }
 
 {
-    const isVowel = (char)=>{
-        if (char=='a'||char==e||char=='i'||char=='o'||char=='u'){
-            return true;
-        }
-        return false;
+  const isVowel = char => {
+    if (char == "a" || char == e || char == "i" || char == "o" || char == "u") {
+      return true;
     }
-    console.log(isVowel("a"));
+    return false;
+  };
+  console.log(isVowel("a"));
 }
 
 {
-    const getTwoLengths=(str1, str2)=>{
-        return [str1.length,str2.length];
-    }
-    console.log(getTwoLengths("Hank", "Hippopopalous"));
+  const getTwoLengths = (str1, str2) => {
+    return [str1.length, str2.length];
+  };
+  console.log(getTwoLengths("Hank", "Hippopopalous"));
 }
 
 {
-    const getMultipleLengths = (array)=>{
-        let lens = [];
-        for(let i = 0;i<array.length;i++){
-            lens.push(array[i].length);
-        }
-        return lens;
+  const getMultipleLengths = array => {
+    let lens = [];
+    for (let i = 0; i < array.length; i++) {
+      lens.push(array[i].length);
     }
-    console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+    return lens;
+  };
+  console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 }
 
 {
-    const maxOfThree = (num1, num2, num3)=>{
-        if(num1>=num2&&num1>=num3){
-            return num1;
-        }
-        else if(num2>=num1&&num2>=num3){
-            return  num2;
-        }
-        else{
-            return num3;
-        }
+  const maxOfThree = (num1, num2, num3) => {
+    if (num1 >= num2 && num1 >= num3) {
+      return num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+      return num2;
+    } else {
+      return num3;
     }
-    console.log(maxOfThree(6, 9, 1));
+  };
+  console.log(maxOfThree(6, 9, 1));
 }
 
 {
-    const printLongestWord = (array)=>{
-        let str = array[0];
-        for(let i = 1;i<array.length;i++){
-            if(str.length<array[i].length){
-                str=array[i];
-            }
-        }
-        return str;
+  const printLongestWord = array => {
+    let str = array[0];
+    for (let i = 1; i < array.length; i++) {
+      if (str.length < array[i].length) {
+        str = array[i];
+      }
     }
-    console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+    return str;
+  };
+  console.log(
+    printLongestWord([
+      "BoJack",
+      "Princess",
+      "Diane",
+      "a",
+      "Max",
+      "Peanutbutter",
+      "big",
+      "Todd"
+    ])
+  );
 }
 
 {
-    const transmogrify = (num1, num2, num3)=>{
-        return (num1*num2)**num3;
-    }
-    console.log(transmogrify(5, 3, 2));
+  const transmogrify = (num1, num2, num3) => {
+    return (num1 * num2) ** num3;
+  };
+  console.log(transmogrify(5, 3, 2));
 }
 
 {
-  const reverseWordOrder = (str) =>{
-        let str2="";
-        let toReturn ="";
-        for(let i = 0;i<str.length;i++){
-            if(str[i]!=" "){
-                str2+=str[i];
-              
-            }
-            else{
-             
-                toReturn=str2+" "+toReturn;
-                str2="";
-            }
-        }
-        return str2+" "+toReturn;
+  const reverseWordOrder = str => {
+    let str2 = "";
+    let toReturn = "";
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] != " ") {
+        str2 += str[i];
+      } else {
+        toReturn = str2 + " " + toReturn;
+        str2 = "";
+      }
     }
-    console.log(reverseWordOrder("Ishmael me Call"));
-    console.log(reverseWordOrder("I use Lâncome on my comb"));
+    return str2 + " " + toReturn;
+  };
+  console.log(reverseWordOrder("Ishmael me Call"));
+  console.log(reverseWordOrder("I use Lâncome on my comb"));
 }
 
 {
-    const randomInt=(numFrom, numTo)=>{
-        return(Math.floor(Math.random() * (numTo-numFrom)+numFrom));
-    }
-    const randomNum=(numFrom, numTo)=>{
-        return(Math.random() * (numTo-numFrom)+numFrom);
-    }
-    const getRandomElement=(array)=>{
-        return array[randomInt(0,array.length)];
-    }
-    let quotes = ["a", "b", "c","d","e","f"];
+  const randomInt = (numFrom, numTo) => {
+    return Math.floor(Math.random() * (numTo - numFrom) + numFrom);
+  };
+  const randomNum = (numFrom, numTo) => {
+    return Math.random() * (numTo - numFrom) + numFrom;
+  };
+  const getRandomElement = array => {
+    return array[randomInt(0, array.length)];
+  };
+  let quotes = ["a", "b", "c", "d", "e", "f"];
 
-    console.log(randomInt(1,10));
-    console.log(randomInt(10,100));
-    console.log(randomNum(532,13267));
-    console.log(randomNum(1,10));
-    console.log(getRandomElement(quotes));
-//Technically the maximum is weighted significantly less than all others in the randomInt function.
-//Unsure how to address it, as either the min or max would be weighted (since it's 1.00-1.99=1 when floored, but maximum is the max, not max+.01 or anything
-//I say that, then after testing it I do get a maximum value. hmm
+  console.log(randomInt(1, 10));
+  console.log(randomInt(10, 100));
+  console.log(randomNum(532, 13267));
+  console.log(randomNum(1, 10));
+  console.log(getRandomElement(quotes));
+  //Technically the maximum is weighted significantly less than all others in the randomInt function.
+  //Unsure how to address it, as either the min or max would be weighted (since it's 1.00-1.99=1 when floored, but maximum is the max, not max+.01 or anything
+  //I say that, then after testing it I do get a maximum value. hmm
 }
 
+{
+  const user = {
+    name: "Tom",
+    email: "a@a.a",
+    age: 11,
+    purchased: [],
+    friend: {
+      name: "Paul",
+      age: 12,
+      location: "LA",
+      purchased: []
+    }
+  };
+
+  user.email = "b@b.b";
+  user.age++;
+  user["location"] = "LA";
+  user["purchased"].push("carbohydrates");
+  user["purchased"].push("peace of mind");
+  user["purchased"].push("merino jodhpurs");
+  console.log(user["purchased"][2]);
+  console.log(user.friend.name);
+  console.log(user["friend"]["location"]);
+  user.friend.age = 55;
+  user["friend"]["purchased"].push("The One Ring");
+  user["friend"]["purchased"].push("A latte");
+  console.log(user.friend.purchased[1]);
+  for (let i = 0; i < user.purchased.length; i++) {
+    console.log(user.purchased[i]);
+  }
+  for (let i = 0; i < user.friend.purchased.length; i++) {
+    console.log(user.friend.purchased[i]);
+  }
+  const updateUser = ()=>{
+      user.age++;
+      user.name.toUpperCase();
+  }
+  const oldAndLoud = (person)=>{
+    person.age++;
+    person.name.toUpperCase();
+  }
+  oldAndLoud(user);
+}
