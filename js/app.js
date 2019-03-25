@@ -339,3 +339,27 @@
   }
   oldAndLoud(user);
 }
+
+
+{
+    const cat1 ={
+        name: "Joe", age: 19, breed: "Mog"
+    }
+    const cat2 ={
+        name: "Jam", age: 45, breed: "Siamese"
+    }
+  
+    const combineCats = (mama,papa) =>{
+        const catBab={
+            name : mama.name+papa.name,
+            age:1,
+            breed:mama.breed+"-"+papa.breed
+        }
+        return catBab;
+    }
+  
+    catBaby=combineCats(cat1,cat2);
+    console.log(catBaby);
+
+    console.log(combineCats((combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2))),(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)))));
+}
